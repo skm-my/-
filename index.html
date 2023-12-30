@@ -1,0 +1,257 @@
+<header class="header">
+	<h1 class="header__title"><a class="header__link" href="https://skmm789.carrd.co/" target="_blank"><img class="header__image" src="https://i.ibb.co/7znjnbB/300634390-102353879270271-1209415580489970454-n-removebg-preview.png" alt="CSS Weekly" width="120" height="130" /></a></h1>
+	<a class="btn" href="https://skmm789.carrd.co/" target="_blank">ဂိမ်းအကောင့်ဖွင့်ရန်</a>
+</header>
+
+<section class="main">
+	
+	<article class="card card--first">
+		<div class="card__start"></div>
+		<div class="card__end"></div>
+		
+		<div class="card__content">
+			<a target="_blank" href="https://skmm789.carrd.co/"><img class="card__image" src="https://www.dropbox.com/scl/fi/yluh1qmj9wk087yjul4oe/Fish-Game-1.png?rlkey=ytkp5rby1qy8kc8n7aqz6fbp3&raw=1" alt="Zoran Jambor in a recording studio behind a desk." /></a>
+			<h2 class="card__title"><a target="_blank" href="https://youtube.com/@cssweekly">ဂိမ်းအကောင့်ဖွင့်ရန်</a></h2>
+			<div class="card__text">
+				<p></p>
+				<p><a class="btn" target="_blank" href="https://youtube.com/@cssweekly"></a></p>
+			</div>
+		</div>
+	</article>
+	
+	<article class="card card--center">
+		<div class="card__start"></div>
+		<div class="card__end"></div>
+		
+		<div class="card__content">
+			<a target="_blank" href="https://skmm789.carrd.co/"><img class="card__image" src="https://www.dropbox.com/scl/fi/ynkcsbn43krizq6t85kqz/BuGyi-1.png?rlkey=90zrm6eli7bjwcutf2y697bbm&raw=1" alt="Mastering Prettier & Stylelint" /></a>
+			<h2 class="card__title"><a target="_blank" href="https://masteringlinting.com">မန်ဘာသစ် ဘောနပ်များရယူရန်</a></h2>
+			<div class="card__text">
+				<p></p>
+				<p><a class="btn" target="_blank" href="https://masteringlinting.com"></a></p>
+			</div>
+		</div>
+	</article>
+	
+	<article class="card card--last">
+		<div class="card__start"></div>
+		<div class="card__end"></div>
+		
+		<div class="card__content">
+			<a  href="https://skmm789.carrd.co/" target="_blank"><img class="card__image" src="https://www.dropbox.com/scl/fi/5hzk23ezsautnggw0i2rw/Small-Game-1.png?rlkey=cjszarvw1zejoyvfafz5jbxum&raw=1" alt="A laptop with a bunch of stunning stickers." /></a>
+			<h2 class="card__title"><a  href="https://stickers.css-weekly.com" target="_blank">ကစားပြီး အနိုင်ငွေများ ထုတ်ယူလိုက်ပါ</a></h2>
+			<div class="card__text">
+				<p></p>
+				<p><a class="btn" href="https://stickers.css-weekly.com" target="_blank"></a></p>
+			</div>
+		</div>
+	</article>
+
+</section>
+
+<footer class="footer">
+	<p class="footer__text"><small>▶</small> <a href="https://skmm789.carrd.co/" target="_blank">Copyright by "ရှမ်းကိုးမီး"</a></p>
+</footer>
+<style>
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+	min-block-size: 100vb;
+	line-height: 1.5;
+	font-size: 1.4rem;
+	font-family: sans-serif;
+	 background:url(https://www.dropbox.com/scl/fi/x7zxlh7yxjrcta45f6ddi/unnamed.jpg?rlkey=yz0xyjumy6tli1f2u6l39ydvo&raw=1);
+  background-size:cover;
+	color: rgb(255, 255, 255);
+}
+
+a {
+	color: hsl(261deg 70% 90%);
+	
+	&:hover {
+		color: hsl(261deg 70% 100%);
+	}
+}
+
+.btn {
+	display: inline-block;
+	inline-size: auto;
+	padding-block: 0.3rem;
+	padding-inline: 1rem;
+	border: 1px solid hsl(0 0 90%);
+	border-radius: 100px;
+	text-decoration: none;
+	color: hsl(0 0 100%);
+	transition: all 0.2s ease-in-out;
+
+	&:hover {
+		background: hsl(0 0 100%);
+		color: hsl(0 0 20%);
+	}
+
+	.header & {
+		padding-block: 0.5rem;
+		padding-inline: 1.2rem;
+		margin-block: 2rem;
+		font-size: 1.1rem;
+	}
+}
+
+.header,
+.footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	padding-inline: 3rem;
+	background: hsl(0 0 0% / 0.5);
+}
+
+.footer {
+	justify-content: center;
+}
+
+.header__title {
+	margin-block: 2rem;
+}
+	
+.header__image {
+	display: block;
+	margin: auto;
+	max-inline-size: 100%;
+}
+
+.footer__text {
+	font-size: 1.2rem;
+}
+
+.main {
+	width: 100%;
+	padding: 3rem;
+	display: flex;
+	justify-content: center;
+	align-self: center;
+	flex-wrap: wrap;
+	row-gap: 3rem;
+}
+
+/* Demo Code */
+.card {
+	--margin: 2rem;
+	--padding: 2rem;
+	--slant: 20%;
+
+	margin-inline: 0;
+	padding-inline: var(--padding);
+	padding-inline: 0;
+
+	display: block;
+	inline-size: 100%;
+	max-inline-size: 400px;
+	min-inline-size: 340px;
+	position: relative;
+	inset-block-start: 0;
+	overflow: hidden;
+	background: hsl(0 0 0% / 0.5);
+	transition: all 0.2s ease;
+
+	clip-path: polygon(
+		var(--slant) 0,
+		100% 0,
+		calc(100% - var(--slant)) 100%,
+		0 100%
+	);
+	clip-path: polygon(
+		calc(var(--slant) - var(--padding)) 0,
+		100% 0,
+		calc(100% - var(--slant) + var(--padding)) 100%,
+		0 100%
+	);
+}
+
+.card:hover {
+	inset-block-start: -0.7rem;
+	scale: 1.1;
+}
+
+.card__start,
+.card__end {
+	// background: grey;
+	block-size: 100%;
+	inline-size: var(--slant);
+}
+
+.card__start {
+	float: inline-start;
+	// clip-path: polygon(0 0, 100% 0, 0 100%);
+	shape-outside: polygon(0 0, 100% 0, 0 100%);
+	// shape-outside: polygon(0 0, 100% 0, var(--padding) 100%, 0 100%);
+	shape-margin: 2rem;
+}
+
+.card__end {
+	float: inline-end;
+	// clip-path: polygon(100% 100%, 100% 0, 0 100%);
+	shape-outside: polygon(100% 100%, 100% 0, 0 100%);
+	shape-margin: 2rem;
+	// shape-outside: polygon(
+	// 	100% 100%,
+	// 	100% 0,
+	// 	calc(100% - var(--padding)) 0,
+	// 	0 100%
+	// );
+}
+
+.card__content {
+	margin: 0;
+	padding: 0;
+	padding-block-end: 2rem;
+	font-size: 1rem;
+	// text-align: justify;
+}
+
+.card__title {
+	margin-block: 2rem 1rem;
+	color: hsl(0 0 100%);
+	line-height: 1.2;
+
+	a {
+		color: inherit;
+		text-decoration: none;
+	}
+}
+
+.card__image {
+	margin-block: 0;
+	margin-inline: calc(var(--margin) * -1);
+	margin-inline: calc(var(--slant) * -1);
+	padding: 0;
+	display: inline;
+	inline-size: calc(100% + (var(--margin) * 2));
+	inline-size: 100%;
+	block-size: 17rem;
+	object-fit: cover;
+	object-position: center;
+}
+
+.card__text {
+	margin-block: 1rem 1.3rem;
+	padding: 0;
+}
+
+@media (max-width: 580px) {
+	.header {
+		flex-direction: column;
+	}
+	
+	.header__title {
+		margin-block-end: 0;
+	}
+}
+</style>
