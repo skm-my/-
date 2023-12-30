@@ -52,6 +52,11 @@
 <footer class="footer">
 	<p class="footer__text"><small>▶</small> <a href="https://skmm789.carrd.co/" target="_blank">Copyright by "ရှမ်းကိုးမီး"</a></p>
 </footer>
+ <div class='running-line'>
+    <div class='part'>မြန်ဆန်တိကျ အကောင်းဆုံးဝန်ဆောင်မှုကိုပေးနေပြီး အလျော်စားကြမ်းမှ ကြိုက်တယ်ဆိုတဲ့လူကြီးမင်းတို.အတွက် စိတ်ချယုံကြည် "ရှမ်းကိုးမီး"မှ ကြိုဆိုပါတယ်...</div>   
+</div>
+
+
 <style>
 * {
 	box-sizing: border-box;
@@ -67,7 +72,7 @@ body {
 	line-height: 1.5;
 	font-size: 1.4rem;
 	font-family: sans-serif;
-	 background:url(https://www.dropbox.com/scl/fi/x7zxlh7yxjrcta45f6ddi/unnamed.jpg?rlkey=yz0xyjumy6tli1f2u6l39ydvo&raw=1);
+	background:url(https://www.dropbox.com/scl/fi/x7zxlh7yxjrcta45f6ddi/unnamed.jpg?rlkey=yz0xyjumy6tli1f2u6l39ydvo&raw=1);
   background-size:cover;
 	color: rgb(255, 255, 255);
 }
@@ -255,4 +260,59 @@ a {
 		margin-block-end: 0;
 	}
 }
+
+
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap');
+
+@keyframes move-running-line {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.running-line {
+    overflow: hidden;
+    height: 2.8rem;
+    line-height: 1.5;
+    font-family: 'Pixelify Sans', cursive;
+    font-size: 1.4rem;
+    background: #ce4545;
+    color: #ffffff;
+}
+
+.running-line > .part {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-right: 1rem;
+    animation: move-running-line var(--js-duration) linear infinite;
+}
+
+.running-line > .part:first-child {
+    animation-delay: calc(-0.5 * var(--js-duration));
+}
+
+	
 </style>
+
+
+<script>
+const line = document.querySelector('.running-line');
+
+function update() {
+    const em = parseFloat(
+        window.getComputedStyle(line)
+        .getPropertyValue('font-size'),
+    );
+    
+    const duration = 0.5 * (window.innerWidth / em);
+    
+    line.style.setProperty('--js-duration', `${duration}s`);
+}
+
+update();
+window.addEventListener('resize', update);	
+</script>
